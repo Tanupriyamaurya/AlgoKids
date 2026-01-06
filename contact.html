@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>ABOUT</title>
+    <meta charset="utf-8">
+    <meta name="author" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="ABOUT">
+    <meta name="keywords" content="ABOUT">
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script type="text/javascript" src="https://afarkas.github.io/lazysizes/lazysizes.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/combined.min.css?innove" type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//static.sitemantic.com/webbuilder/js/lightbox/src/css/lightbox.css">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link id="theme" rel="stylesheet" href="css/default.css?innove" type='text/css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Lato:400,700,300,100"
+        type='text/css'>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    <style id="footerBefore">
+        .footerBefore:before {}
+    </style>
+    <style>
+    /* ===============================
+   FOOTER TEXT HOVER EFFECT
+================================ */
+.wb-footer h5,
+.wb-footer p,
+.wb-footer a {
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hover effect: lift + color + subtle glow */
+.wb-footer h5:hover,
+.wb-footer p:hover,
+.wb-footer a:hover {
+    transform: translateY(-3px);
+    color: #6d6dff;
+    text-shadow: 0 2px 8px rgba(109, 109, 255, 0.4);
+}
+
+/* ===============================
+   FOOTER LINK ARROW HOVER
+================================ */
+.footer-links a {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-links a::before {
+    content: "➜";
+    position: absolute;
+    left: -18px;
+    opacity: 0;
+    transition: opacity 0.3s ease, left 0.3s ease;
+}
+
+.footer-links a:hover {
+    transform: translateX(6px);
+    color: #6d6dff;
+}
+
+.footer-links a:hover::before {
+    opacity: 1;
+    left: -12px;
+}
+
+/* ===============================
+   SOCIAL ICONS HOVER EFFECT
+================================ */
+.socialIconsWidget li a span {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.socialIconsWidget li a:hover span {
+    transform: translateY(-4px) scale(1.2); /* lift + zoom */
+    color: #6d6dff;
+    box-shadow: 0 6px 18px rgba(109, 109, 255, 0.5);
+}
+
+/* ===============================
+   COPYRIGHT TEXT HOVER
+================================ */
+.footer-copyright p span {
+    transition: text-shadow 0.3s ease;
+}
+
+.footer-copyright p span:hover {
+    text-shadow: 0 0 15px rgba(109,109,255,0.8);
+}
+
+/* ===============================
+   STAGGERED ANIMATION ON LOAD
+================================ */
+.wb-footer h5,
+.wb-footer p,
+.wb-footer a,
+.socialIconsWidget li a span {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: footerFadeUp 0.8s forwards;
+}
+
+.wb-footer h5:nth-child(1) { animation-delay: 0.1s; }
+.wb-footer p:nth-child(1) { animation-delay: 0.2s; }
+.wb-footer a:nth-child(1) { animation-delay: 0.3s; }
+.socialIconsWidget li:nth-child(1) a span { animation-delay: 0.4s; }
+.socialIconsWidget li:nth-child(2) a span { animation-delay: 0.5s; }
+.socialIconsWidget li:nth-child(3) a span { animation-delay: 0.6s; }
+
+@keyframes footerFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===============================
+   MOBILE SAFE (disable heavy hover)
+================================ */
+@media (max-width: 768px) {
+    .wb-footer * {
+        transform: none !important;
+        animation: none !important;
+        box-shadow: none !important;
+    }
+}
+/* ===============================
+   CONTACT & ABOUT SECTION TEXT HOVER
+================================ */
+#about h1,
+#about h2,
+#about h3,
+#about p,
+#contact h1,
+#contact h2,
+#contact h3,
+#contact p,
+#contact a,
+#contact button {
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Lift + color change on hover */
+#about h1:hover,
+#about h2:hover,
+#about p:hover,
+#about a:hover,
+#contact h1:hover,
+#contact h2:hover,
+#contact p:hover,
+#contact a:hover,
+#contact button:hover {
+    transform: translateY(-3px);
+    color: #6d6dff;
+    text-shadow: 0 2px 8px rgba(109,109,255,0.4);
+}
+
+/* ===============================
+   BUTTON HOVER EFFECT
+================================ */
+.theme-button {
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: #6d6dff;
+    box-shadow: 0 6px 18px rgba(109,109,255,0.4);
+    color: #fff;
+}
+
+/* ===============================
+   FOOTER TEXT HOVER EFFECT
+================================ */
+.wb-footer h5,
+.wb-footer p,
+.wb-footer a {
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.wb-footer h5:hover,
+.wb-footer p:hover,
+.wb-footer a:hover {
+    transform: translateY(-3px);
+    color: #6d6dff;
+    text-shadow: 0 2px 8px rgba(109, 109, 255, 0.4);
+}
+
+/* ===============================
+   FOOTER LINK ARROW HOVER
+================================ */
+.footer-links a {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-links a::before {
+    content: "➜";
+    position: absolute;
+    left: -18px;
+    opacity: 0;
+    transition: opacity 0.3s ease, left 0.3s ease;
+}
+
+.footer-links a:hover {
+    transform: translateX(6px);
+    color: #6d6dff;
+}
+
+.footer-links a:hover::before {
+    opacity: 1;
+    left: -12px;
+}
+
+/* ===============================
+   SOCIAL ICONS HOVER EFFECT
+================================ */
+.socialIconsWidget li a span {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.socialIconsWidget li a:hover span {
+    transform: translateY(-4px) scale(1.2); /* lift + zoom */
+    color: #6d6dff;
+    box-shadow: 0 6px 18px rgba(109, 109, 255, 0.5);
+}
+
+/* ===============================
+   COPYRIGHT TEXT HOVER
+================================ */
+.footer-copyright p span {
+    transition: text-shadow 0.3s ease;
+}
+
+.footer-copyright p span:hover {
+    text-shadow: 0 0 15px rgba(109,109,255,0.8);
+}
+
+/* ===============================
+   IMAGE HOVER EFFECT
+================================ */
+.imageWidget img,
+.team-img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.imageWidget img:hover,
+.team-img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* ===============================
+   STAGGERED ANIMATION ON LOAD
+================================ */
+#about h1,
+#about p,
+#contact h1,
+#contact p,
+.wb-footer h5,
+.wb-footer p,
+.wb-footer a,
+.socialIconsWidget li a span {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUpAnim 0.8s forwards;
+}
+
+/* Delay each element to make smooth staggered animation */
+#about h1:nth-child(1),
+#contact h1:nth-child(1),
+.wb-footer h5:nth-child(1) { animation-delay: 0.1s; }
+#about p:nth-child(1),
+#contact p:nth-child(1),
+.wb-footer p:nth-child(1) { animation-delay: 0.2s; }
+#about a:nth-child(1),
+#contact a:nth-child(1),
+.wb-footer a:nth-child(1) { animation-delay: 0.3s; }
+.socialIconsWidget li:nth-child(1) a span { animation-delay: 0.4s; }
+.socialIconsWidget li:nth-child(2) a span { animation-delay: 0.5s; }
+.socialIconsWidget li:nth-child(3) a span { animation-delay: 0.6s; }
+
+@keyframes fadeUpAnim {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    #about *, #contact *, .wb-footer * {
+        transform: none !important;
+        animation: none !important;
+        box-shadow: none !important;
+    }
+}
+/* ===============================
+   FOOTER COLUMN HOVER
+================================ */
+.wb-footer .col-lg-4,
+.wb-footer .col-md-4 {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: default;
+}
+
+.wb-footer .col-lg-4:hover,
+.wb-footer .col-md-4:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* ===============================
+   FOOTER TEXT HOVER
+================================ */
+.wb-footer h5,
+.wb-footer p,
+.wb-footer a {
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.wb-footer h5:hover,
+.wb-footer p:hover,
+.wb-footer a:hover {
+    transform: translateY(-3px);
+    color: #6d6dff;
+    text-shadow: 0 2px 8px rgba(109, 109, 255, 0.4);
+}
+
+/* ===============================
+   FOOTER LINKS ARROW HOVER
+================================ */
+.footer-links a {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-links a::before {
+    content: "➜";
+    position: absolute;
+    left: -18px;
+    opacity: 0;
+    transition: opacity 0.3s ease, left 0.3s ease;
+}
+
+.footer-links a:hover {
+    transform: translateX(6px);
+    color: #6d6dff;
+}
+
+.footer-links a:hover::before {
+    opacity: 1;
+    left: -12px;
+}
+
+/* ===============================
+   SOCIAL ICONS HOVER
+================================ */
+.socialIconsWidget li a span {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.socialIconsWidget li a:hover span {
+    transform: translateY(-4px) scale(1.2); /* lift + zoom */
+    color: #6d6dff;
+    box-shadow: 0 6px 18px rgba(109, 109, 255, 0.5);
+}
+
+/* ===============================
+   COPYRIGHT TEXT HOVER
+================================ */
+.footer-copyright p span {
+    transition: text-shadow 0.3s ease;
+}
+
+.footer-copyright p span:hover {
+    text-shadow: 0 0 15px rgba(109,109,255,0.8);
+}
+
+/* ===============================
+   STAGGERED ANIMATION ON LOAD
+================================ */
+.wb-footer h5,
+.wb-footer p,
+.wb-footer a,
+.socialIconsWidget li a span {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: footerFadeUp 0.8s forwards;
+}
+
+/* Add staggered delay for smooth animation */
+.wb-footer h5:nth-child(1) { animation-delay: 0.1s; }
+.wb-footer p:nth-child(1) { animation-delay: 0.2s; }
+.wb-footer a:nth-child(1) { animation-delay: 0.3s; }
+.socialIconsWidget li:nth-child(1) a span { animation-delay: 0.4s; }
+.socialIconsWidget li:nth-child(2) a span { animation-delay: 0.5s; }
+.socialIconsWidget li:nth-child(3) a span { animation-delay: 0.6s; }
+
+@keyframes footerFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===============================
+   MOBILE SAFE
+================================ */
+@media (max-width: 768px) {
+    .wb-footer * {
+        transform: none !important;
+        animation: none !important;
+        box-shadow: none !important;
+    }
+}
+/* ===============================
+   CONTACT US TITLE HOVER
+================================ */
+#contact h1,
+#contact h2,
+#contact h3 {
+    transition: transform 0.15s ease, color 0.15s ease, text-shadow 0.15s ease;
+    cursor: pointer;
+}
+
+#contact h1:hover,
+#contact h2:hover,
+#contact h3:hover {
+    transform: translateY(-5px) scale(1.03);
+    color: #6d6dff;
+    text-shadow: 0 2px 12px rgba(109,109,255,0.5);
+}
+
+
+
+
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Select all the text elements you want to animate
+        const elements = document.querySelectorAll('h1, h5, p, a');
+
+        elements.forEach((el, index) => {
+            // Add wow + animate.css classes
+            el.classList.add('wow', 'animate__animated', 'animate__fadeInUp');
+
+            // Optional: control duration and delay
+            el.setAttribute('data-wow-duration', '1s');
+            el.setAttribute('data-wow-delay', (index * 0.1) + 's'); // staggered effect
+        });
+
+        // Initialize WOW.js AFTER classes are added
+        new WOW({
+            animateClass: 'animate__animated', // Animate.css v4
+            offset: 100
+        }).init();
+    });
+</script>
+
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.0';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <header class="blockHeader wb-header" fixed="false">
+        <div class="container boxWidget">
+            <div class="logoWidget logo logoTextSettingClass">
+                <a href="home.html?innove" title="">
+                    <span id="logoTextWrap" style="">
+                        <span class="websiteLogoName"
+                            style="color:#0000;font-family:Roboto;font-size:25px">algokid</span>
+                        <span class="websiteLogoSlogan" style="color:#fff;font-family:Roboto;font-size:10px"></span>
+                    </span>
+                </a>
+            </div>
+
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="navbar-header" id="21558871" compid="21558871" pageid="0" component-data="{}">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div class="navWidget navbar-collapse collapse">
+                    <ul class="parent-nav-ul nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="home.html" pageslug="home" linktype="Page" class="siteNavLink">HOME</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="about.html" pageslug="about" linktype="Page" class="siteNavLink">ABOUT</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="services.html" pageslug="services" linktype="Page" class="siteNavLink">SERVICES</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="gallery.html" pageslug="gallery" linktype="Page" class="siteNavLink">GALLERY</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="contact.html" pageslug="contact" linktype="Page" class="siteNavLink">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container header-image-text"></div>
+    </header>
+
+    <div id="contact" class="page wb-page">
+
+    <!-- Contact Hero Section -->
+    <section id="contact-hero" class="breadcrumb-section dark sec-padding-lg"
+        style="background-image: url(https://images.pexels.com/photos/3184396/pexels-photo-3184396.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200);background-repeat: no-repeat;background-size: cover;background-position: center center;">
+        <div class="container boxWidget">
+            <div class="col-lg-6">
+                <div class="richTextWidget title-heading">
+                    <h1>Contact Us</h1>
+                    <p>We'd love to hear from you! Reach out to us with any questions, feedback, or partnership inquiries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information & Form -->
+    <section id="contact-info-form" class="widget-section">
+        <div class="container boxWidget">
+            <div class="row custom-row">
+
+                <!-- Contact Info -->
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="richTextWidget para-normal">
+                        <h2>Our Office</h2>
+                        <p><strong>Address:</strong> Algokid, 123 Innovation Way, New York, NY 10001, USA</p>
+                        <p><strong>Phone:</strong> +1 999 673 984</p>
+                        <p><strong>Email:</strong> support@algokid.com</p>
+
+                        <h2>Business Hours</h2>
+                        <p>Monday – Friday: 9:00 AM – 6:00 PM</p>
+                        <p>Saturday – Sunday: Closed</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="richTextWidget para-normal">
+                        <h2>Send Us a Message</h2>
+                        <form id="contactForm" action="#" method="POST">
+                            <div style="margin-bottom: 15px;">
+                                <input type="text" name="name" placeholder="Your Name" required
+                                    style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <input type="email" name="email" placeholder="Your Email" required
+                                    style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <textarea name="message" placeholder="Your Message" required
+                                    style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; min-height: 150px;"></textarea>
+                            </div>
+                            <button type="submit" class="theme-button"
+                                style="padding: 10px 25px; border-radius: 5px;">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="contact-map" class="widget-section">
+        <div class="container boxWidget">
+            <div class="row custom-row">
+                <div class="col-lg-12">
+                    <div class="richTextWidget para-normal">
+                        <h2>Find Us Here</h2>
+                        <div id="map" style="width: 100%; height: 400px; border-radius: 10px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<script>
+    // Initialize Google Map
+    function initMap() {
+        var office = { lat: 40.7128, lng: -74.0060 }; // New York coordinates
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 14,
+            center: office
+        });
+        var marker = new google.maps.Marker({ position: office, map: map });
+    }
+    google.maps.event.addDomListener(window, 'load', initMap);
+</script>
+
+
+    <!-- Footer (unchanged) -->
+    <footer class="footerBefore wb-footer  wb-footer theme-dark-color-11"
+        style="background: url(//images.unsplash.com/photo-1505236858219-8359eb29e329?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1430&amp;amp;q=80) fixed no-repeat center center;position: relative; background-size: cover;margin-top:0px">
+        <div class="container boxWidget">
+            <div class="footer-content ">
+                <div class="row ">
+                    <div class=" col-lg-4 col-md-4 col-sm-12 ">
+                        <div class="footer-logo ">
+                            <div class="richTextWidget">
+                                <a href="#" style="text-transform: capitalize;">Company Overview</a>
+                                <p>With a commitment to excellence and customer satisfaction, we strive to deliver premium
+                                    quality and innovative solutions tailored to meet your needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 ">
+                        <div class="richTextWidget">
+                            <h5>Contact</h5>
+                            <div class="footer-links ">
+                                <ul>
+                                    <li><span style="margin-left: 5px;" class="fa">&#61505;</span><a
+                                            href="#">Algokid, 123 Innovation Way, New York, NY 10001, USA</a></li>
+                                    <li><span style="margin-left: 3px;" class="fa">&#61589;</span> <a href="#">999 673 984</a>
+                                    </li>
+                                    <li><span class="fa">&#62134;</span><a href="#">support@yourdomain.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 ">
+                        <div class="richTextWidget">
+                            <h5>Services</h5>
+                            <div class="footer-links ">
+                                <ul>
+                                    <li><a href="services.html?innove">Project-Based Learning</a></li>
+                                    <li><a href="services.html?innove">Personalized Learning Paths</a></li>
+                                    <li><a href="services.html?innove">Safe Online Collaboration</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container boxWidget">
+            <div class="footer-copyright ">
+                <div class="row ">
+                    <div class="richTextWidget col-lg-8 col-md-8 col-sm-12 ">
+                        <p>Copyright 2024 All Rights Reserved. Made by <span
+                                style="color:#6d6dff;font-weight:800;">Innove.ai</span></p>
+                    </div>
+                    <div class="socialIconsWidget col-lg-4 col-md-4 col-sm-12">
+                        <ul class="editSocialIcon">
+                            <li><a href="https://www.facebook.com/" target="_blank"><span class="fa">&#61594;</span></a>
+                            </li>
+                            <li><a href="https://www.twitter.com/" target="_blank"><span class="fa">&#61593;</span></a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/" target="_blank"><span class="fa">&#61665;</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://static.sitemantic.com/webbuilder/js/lightbox/src/js/lightbox.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+
+    <!-- WOW.js Initialization -->
+    <script>
+        wow = new WOW({
+            animateClass: 'animate__animated', // Animate.css v4
+            offset: 100
+        });
+        wow.init();
+
+        // Animate all text elements dynamically
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll('h1, h5, p, a');
+            elements.forEach((el, index) => {
+                el.classList.add('wow', 'animate__fadeInUp');
+                el.setAttribute('data-wow-duration', '1s');
+                el.setAttribute('data-wow-delay', (index * 0.1) + 's'); // staggered
+            });
+        });
+    </script>
+
+    <script language='JavaScript' type='text/javascript'>
+        var ecommerceConfig = { 'bussinessAccount': '', 'paymentGatewayUrl': '' }
+        var imageBg = null
+        $('.dropdown').find('a').each(function () { $(this).attr('href', $(this).attr('href') + "?innove"); });
+    </script>
+
+    <script>
+        var AppConfig = {
+            'siteId': '1567afa4b228f2e62dba4bc4a94dc7a2',
+            'api_url': 'https://system.sitemantic.com/apps/api/',
+            'api_key': '',
+            'template': 'inspire-hub'
+        }
+    </script>
+    <script custom-script-id="website_global" src="//static.sitemantic.com/webbuilder/js/website_global.js"></script>
+
+</body>
+</html>
